@@ -8,7 +8,7 @@ gulp.task('css', function () {
             require('postcss-partial-import'),
             require('autoprefixer'),
             require('precss'),
-            require('postcss-nested')
+            require('postcss-nested'),
             require('postcss-css-variables')
         ]))
         .pipe(gulp.dest('./wwwroot/css/'));
