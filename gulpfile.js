@@ -3,7 +3,7 @@ var gulp = require('gulp');
 var minify = require('gulp-minify');
 
 gulp.task('css', function () {
-    return gulp.src('./assets/postcss/main.css')
+    return gulp.src('./assets/postcss/app.css')
         .pipe(postcss([
             require('postcss-partial-import'),
             require('autoprefixer'),
@@ -25,7 +25,16 @@ gulp.task('js', function() {
     .pipe(gulp.dest('./wwwroot/js/'))
 })
 
+gulp.task('vendor', function() {
+    gulp.src('node_modules/font-awesome/fonts/*')
+      .pipe(gulp.dest('wwwroot/fonts/'));
+    gulp.src('node_modules/font-awesome/css/font-awesome.min.css')
+      .pipe(gulp.dest('wwwroot/css/'))
+});
+
 gulp.task('watch', function() {
     gulp.watch('assets/postcss/*', ['css'])
     gulp.watch('assets/js/*', ['js'])
 });
+
+gulp.task('init', ['vendor', 'css', 'js']);

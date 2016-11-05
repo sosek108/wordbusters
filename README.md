@@ -5,7 +5,8 @@ Simple project which is boilerplate for even simpler sites written in HTML/CSS/J
 
 First run
 ---------
-* ```` npm install ````
+* `` npm install ``
+* `` gulp init ``
 
 Fancy stuff inside
 ------------------
