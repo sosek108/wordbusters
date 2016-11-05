@@ -16,8 +16,9 @@ gulp.task('js', function() {
     gulp.src('assets/js/*.js')
     .pipe(minify({
         ext:{
-          min: '.js'
-        }
+          min: '.min.js'
+        },
+        noSource: true
     }))
     .pipe(gulp.dest('./wwwroot/js/'))
 })
