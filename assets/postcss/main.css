@@ -1,0 +1,29 @@
+:root {
+  --header-primary: blue;
+  --header-secondary: lightblue;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: var(--header-primary);
+}
+h2 {
+  color: var(--header-secondary);
+}
+
+.full-width {
+  width: 100%;
+}
+
+.standard-width {
+  width: 80%;
+  max-width: 1024px;
+  margin: auto;
+}
+
+.circle {
+  border-radius: 50%
+}
