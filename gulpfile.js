@@ -26,10 +26,15 @@ gulp.task('js', function() {
 })
 
 gulp.task('vendor', function() {
+    //Font Awesome
     gulp.src('node_modules/font-awesome/fonts/*')
       .pipe(gulp.dest('wwwroot/fonts/'));
     gulp.src('node_modules/font-awesome/css/font-awesome.min.css')
-      .pipe(gulp.dest('wwwroot/css/'))
+      .pipe(gulp.dest('wwwroot/css/'));
+
+    //JQuery
+    gulp.src('node_modules/jquery/dist/jquery.min.js')
+      .pipe(gulp.dest('wwwroot/js/'));
 });
 
 gulp.task('watch', function() {
