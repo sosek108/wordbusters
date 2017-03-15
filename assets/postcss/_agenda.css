@@ -12,8 +12,6 @@
         color: inherit;
     }
     .footer {
-        position: absolute;
-        bottom: 2vh;
         width: 70vw;
         img {
             width: 50px;
