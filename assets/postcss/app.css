@@ -1,0 +1,94 @@
+@import "main.css";
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif|Lato');
+@import "_agenda.css";
+:root {
+    --black: #333;
+    --blue: #01a2d6;
+    --grey: #676767;
+    --primary-text-color: var(--black);
+    --secondary-text-color: var(--blue);
+    --tertiary-text-color: var(--grey);
+
+    --font-sans-serif: "Lato", sans-serif;
+    --font-sans-serif-bold: "Lato Bold", sans-serif;
+    --font-serif: "Droid Serif", serif;
+}
+
+.background-blend {
+    position: absolute;
+    top: 0;
+    z-index:-1;
+    display: block;
+    background-color: #ededed;
+    mix-blend-mode: luminosity;
+    width: 100vw;
+    height: 100vh;
+    .blend-image {
+        background-image: url('../images/background.jpg');
+        width: 100vw;
+        height: 100vh;
+        display: block;
+        background-size: cover;
+        opacity: 0.11;
+    }
+}
+
+header {
+    position:relative;
+    height: 100vh;
+    nav {
+        color: var(--secondary-text-color);
+        ul {
+            list-style-type: none;
+            margin-top: 0px;
+            padding-top: 20px;
+            padding-left: 0;
+            display: flex;
+            width: 60vw;
+            float: right;
+            li {
+                display: inline-block;
+                padding: 0.2em 0.25em 0.05em 0.2em;
+                margin: auto;
+                font-family: var(--font-sans-serif);
+                cursor: pointer;
+                transition: all ease 0.5s;
+                font-size: 1.4em;
+                text-transform: uppercase;
+                .right {
+                    align-self: flex-end;
+                }
+                &:after {
+                    border-bottom: 1px var(--secondary-text-color) solid;
+                    display: block;
+                    content: ' ';
+                    width: 0;
+                    margin: auto;
+                    transition: all ease 0.5s;
+                }
+                &:hover {
+                    /*background-color: white;*/
+                    color: var(--tertiary-text-color);
+                    &:after {
+                        width: 100%;
+                        border-bottom: 1px var(--tertiary-text-color) solid;
+                    }
+                }
+                a {
+                    color: inherit;
+                    text-decoration: inherit;
+                }
+            }
+        }
+    }
+}
+
+section .image {
+    width: 30vw;
+    img {
+        width: 100%;
+    }
+}
+section .text {
+    width: 65vw;
+}
